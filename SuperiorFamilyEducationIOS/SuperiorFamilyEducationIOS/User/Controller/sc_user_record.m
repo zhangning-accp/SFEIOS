@@ -93,11 +93,10 @@
     dataSource = [[NSArray alloc]initWithObjects:@"胸围",  @"生病", @"饮食", @"排泄", @"体重", @"身高", @"头围", nil];
     /////////////////////////////////////
     
-    // 按钮个数计数
-    NSInteger j = 0, n = 0;
-    int x = 0, y = 0;
+    // 数据总量
+    NSInteger dataCount = [fixedButtonTitleArray count] + [dataSource count];
     // 每页9个按钮分布，计算要几个页面
-    NSInteger pageCount = ([fixedButtonTitleArray count] + [dataSource count]) / 9 + 1;
+    NSInteger pageCount = dataCount / 9 + 1;
     // 初始化滚动视图
     CGRect scrollViewRect = CGRectMake(0, 0, bottomViewRect.size.width, bottomViewRect.size.height);
     scrollView = [[UIScrollView alloc]initWithFrame:scrollViewRect];
@@ -108,67 +107,33 @@
     
     // 循环构建页面
     CGRect vviewRect = CGRectMake(0, 0, scrollViewRect.size.width, scrollViewRect.size.height);
-    for (int i = 0; i < pageCount; i++) {
-        UIView *vview;
-        
-        // 如果I=0，加载固定项，否则加载用户定义数据项
-        int index = 0;
-        if (i == 0) {
-            vview = [[UIView alloc]initWithFrame:vviewRect];
-            [scrollView addSubview:vview];
-            for (j = 0; j < [fixedButtonTitleArray count]; j++) {
-                if (n % 3 == 0 && n != 0) {
-                    if (x == 3) {
-                        y++;
-                        x = 0;
-                    }
-                }
-                if (index > [fixedImageArray count]) {
-                    index = 0;
-                }
-                CGRect buttonRect = CGRectMake(40 + x * 80 + x * 30, 30 + y * 80 + y * 30, 80, 80);
-                UIButton *button = [[UIButton alloc]initWithFrame:buttonRect];
-                [button setTitle:[NSString stringWithFormat:@"%@", fixedButtonTitleArray[index]] forState:UIControlStateNormal];
-                [button setBackgroundImage:fixedImageArray[index] forState:UIControlStateNormal];
-                [button setFont:[UIFont boldSystemFontOfSize:22]];
-                [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-                [button setTag:j+1];
-                [vview addSubview:button];
-                x++;
-                index++;
-                n++;
-            }
-        } else {///
-            index = 0;
-            for (j = 0; j < [dataSource count]; j++) {
-                if (n % 3 == 0 && n != 0) {
-                    if (x == 3) {
-                        y++;
-                        x = 0;
-                    }
-                }
-                if (n % 9 == 0 && n != 0) {
-                    y = 0;
-                    x = 0;
-                    vview = [[UIView alloc]initWithFrame:vviewRect];
-                    [scrollView addSubview:vview];
-                }
-                if (index > [fixedImageArray count]) {
-                    index = 0;
-                }
-                CGRect buttonRect = CGRectMake(40 + x * 80 + x * 30, 30 + y * 80 + y * 30, 80, 80);
-                UIButton *button = [[UIButton alloc]initWithFrame:buttonRect];
-                [button setTitle:[NSString stringWithFormat:@"%@", dataSource[index]] forState:UIControlStateNormal];
-                [button setBackgroundImage:fixedImageArray[index] forState:UIControlStateNormal];
-                [button setFont:[UIFont boldSystemFontOfSize:22]];
-                [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-                [button setTag:j+1];
-                [vview addSubview:button];
-                x++;
-                index++;
-                n++;
+    
+    // 批量生成功能按钮
+    int index = 0, x = 0, y = 0, n = 0;
+    UIView *vview = [[UIView alloc]initWithFrame:vviewRect];
+    [scrollView addSubview:vview];
+    // 添加固定数据按钮项
+    for (int i = 0; i < [fixedButtonTitleArray count]; i++) {
+        if (i % 3 == 0 && i != 0) {
+            if (x == 3) {
+                y++;
+                x = 0;
             }
         }
+        if (index > [fixedImageArray count] - 1) {
+            index = 0;
+        }
+        CGRect buttonRect = CGRectMake(40 + x * 80 + x * 30, 30 + y * 80 + y * 30, 80, 80);
+        UIButton *button = [[UIButton alloc]initWithFrame:buttonRect];
+        [button setTitle:[NSString stringWithFormat:@"%@", fixedButtonTitleArray[index]] forState:UIControlStateNormal];
+        [button setBackgroundImage:fixedImageArray[index] forState:UIControlStateNormal];
+        [button setFont:[UIFont boldSystemFontOfSize:22]];
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [button setTag:(n + 1)];
+        [vview addSubview:button];
+        x++;
+        index++;
+        n++;
     }
 }
 
