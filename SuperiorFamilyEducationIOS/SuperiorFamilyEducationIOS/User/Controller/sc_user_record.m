@@ -138,7 +138,7 @@
                 index++;
                 n++;
             }
-        } else {
+        } else {///
             index = 0;
             for (j = 0; j < [dataSource count]; j++) {
                 if (n % 3 == 0 && n != 0) {
