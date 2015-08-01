@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+    </dependencies>
+    <scenes>
+        <!--Sc user logo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="iden_logo" id="BYZ-38-t0r" customClass="sc_user_logo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-625" y="-269"/>
+        </scene>
+        <!--Sc user login-->
+        <scene sceneID="242-EZ-Mi3">
+            <objects>
+                <viewController storyboardIdentifier="iden_login" id="jOY-Xd-Gvd" customClass="sc_user_login" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jNJ-YU-gLi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kml-KY-3lg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e6g-Hp-9BP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="手机登陆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oK-bo-pTd">
+                                <rect key="frame" x="0.0" y="28" width="359" height="47"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f68-jh-bED">
+                                <rect key="frame" x="0.0" y="73" width="359" height="175"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5.png" highlightedImage="5.png" translatesAutoresizingMaskIntoConstraints="NO" id="COu-rW-WFN">
+                                <rect key="frame" x="20" y="256" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="6.png" highlightedImage="6.png" translatesAutoresizingMaskIntoConstraints="NO" id="fnK-d2-z1B">
+                                <rect key="frame" x="20" y="309" width="50" height="50"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJ6-dp-hrh">
+                                <rect key="frame" x="78" y="274" width="263" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="注册账号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTS-Jo-VJD">
+                                <rect key="frame" x="265" y="366" width="76" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.63529413938522339" blue="0.70980393886566162" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va5-ak-kv7">
+                                <rect key="frame" x="20" y="404" width="321" height="38"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="24"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonLoginClickAction:" destination="jOY-Xd-Gvd" eventType="touchUpInside" id="5JG-BX-ucN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-cc-wRQ">
+                                <rect key="frame" x="78" y="328" width="263" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonLogin" destination="va5-ak-kv7" id="aDW-eJ-qoN"/>
+                        <outlet property="imageAccount" destination="COu-rW-WFN" id="zHN-Cu-tq9"/>
+                        <outlet property="imagePassword" destination="fnK-d2-z1B" id="YTv-d3-hVc"/>
+                        <outlet property="imageTitle" destination="f68-jh-bED" id="LvS-vL-p8K"/>
+                        <outlet property="labelRegister" destination="LTS-Jo-VJD" id="m3T-lg-O1T"/>
+                        <outlet property="labelTitle" destination="6oK-bo-pTd" id="uAg-cj-36t"/>
+                        <outlet property="textAccount" destination="TJ6-dp-hrh" id="zM3-1b-ayD"/>
+                        <outlet property="textPassword" destination="NCK-cc-wRQ" id="atb-cX-nfN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1j-Pn-F89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="-269"/>
+        </scene>
+        <!--Sc user home-->
+        <scene sceneID="mKJ-xN-DUM">
+            <objects>
+                <viewController storyboardIdentifier="iden_home" id="w4g-W0-HZl" customClass="sc_user_home" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gtN-Xj-7gD"/>
+                        <viewControllerLayoutGuide type="bottom" id="D2Y-aX-oVv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QF5-w0-pJi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98873628520000001" green="1" blue="0.82318844670000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMa-ak-BYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-625" y="400"/>
+        </scene>
+        <!--Sc user diary record-->
+        <scene sceneID="BMd-Mt-tXO">
+            <objects>
+                <viewController storyboardIdentifier="iden_diary_record" id="3CE-7c-Ivr" customClass="sc_user_diary_record" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lZS-Kr-ZO4"/>
+                        <viewControllerLayoutGuide type="bottom" id="v3v-4c-2pO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YWJ-dY-nZx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3w-7b-mFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="400"/>
+        </scene>
+        <!--Sc user record-->
+        <scene sceneID="61Z-W4-S50">
+            <objects>
+                <viewController storyboardIdentifier="iden_record" id="1ut-GM-QPV" customClass="sc_user_record" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b1e-Eg-Ztz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ep2-8c-raB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wcj-Tm-Ree">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECL-sk-iFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="400"/>
+        </scene>
+        <!--Sc user video record-->
+        <scene sceneID="Mns-rC-y80">
+            <objects>
+                <viewController storyboardIdentifier="iden_video_record" id="SUp-t5-xKC" customClass="sc_user_video_record" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4YZ-0E-fNP"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXO-zK-Pum"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EN5-I9-qkO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAU-ZL-qaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="1082"/>
+        </scene>
+        <!--Sc user main-->
+        <scene sceneID="jGr-yr-o1t">
+            <objects>
+                <tabBarController storyboardIdentifier="iden_main" id="TUu-2d-HE3" customClass="sc_user_main" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="vVE-w0-yYm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8Z-KR-HiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="-269"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="5.png" width="43" height="43"/>
+        <image name="6.png" width="35" height="44"/>
+    </resources>
+</document>

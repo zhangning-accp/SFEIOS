@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3f733ae9-26d7-c748-8c18-115b066fce95++6307",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "3f733ae9-26d7-c748-8c18-115b066fce95++6307" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3f733ae9-26d7-c748-8c18-115b066fce95++6307" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6C62D8B3-6E86-48A1-8704-C06FE88F8510",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3f733ae9-26d7-c748-8c18-115b066fce95++6307" : "SuperiorFamilyEducationIOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SuperiorFamilyEducationIOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SuperiorFamilyEducationIOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.1.220\/svn\/JTJY",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3f733ae9-26d7-c748-8c18-115b066fce95++6307"
+    }
+  ]
+}

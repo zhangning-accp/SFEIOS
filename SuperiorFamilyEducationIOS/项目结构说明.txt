@@ -1,0 +1,3 @@
+目录结构						主目录						模块名		参看非common文件命名					controller	UI				model	实体类，数据源，dao				util	工具类				view	自定义组件				business	业务逻辑	biz		common			文件命名：sfe_功能类名					controller					model					util					view					define		非common文件命名						前缀_模块名_功能类名		所有字母全小写		前缀枚举						sv	SFE+VIEW									sc	SFE+CONTROLLER				sm	SFE+MODEL		sm_baby_user_entity						sm_baby_user_dao		su	SFE+UTIL				sb	SFE+BUSINESS			
+
+相关的功能类名应该使用清晰易懂的后缀。如dao,entity,view,controller,biz,def,［util］。［］表示可选，其它表示必须
