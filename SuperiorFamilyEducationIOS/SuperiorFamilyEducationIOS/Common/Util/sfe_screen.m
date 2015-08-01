@@ -86,4 +86,19 @@
     }
 }
 
+/**
+ 功能：将controller压入到NavigationController里
+ @param MainStoryBoardID:主启动的storyboardid
+ @param controllerIdenName:需要被push的controller idenID
+ @param navContr: UINavigationController.通常是self.navigationController.
+ author:zn
+ */
++(void)pushViewController:(nonnull NSString*) MainStoryBoardID IdentityName:(nonnull NSString *)controllerIdenName NavController:(nonnull UINavigationController*) navContr {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:MainStoryBoardID bundle:nil];
+    UIViewController *viewController = [storyBoard instantiateViewControllerWithIdentifier:controllerIdenName];
+    
+    [navContr pushViewController:viewController animated:YES];
+}
+
+
 @end
