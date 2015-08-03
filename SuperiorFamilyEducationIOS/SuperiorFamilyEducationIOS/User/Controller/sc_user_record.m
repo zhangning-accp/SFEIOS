@@ -106,13 +106,20 @@
     [bottomView addSubview:scrollView];
     
     // 循环构建页面
-    CGRect vviewRect = CGRectMake(0, 0, scrollViewRect.size.width, scrollViewRect.size.height);
+//    CGRect vviewRect = CGRectMake(0, 0, scrollViewRect.size.width, scrollViewRect.size.height);
     
     // 批量生成功能按钮
-    int index = 0, x = 0, y = 0, n = 0;
-    UIView *vview = [[UIView alloc]initWithFrame:vviewRect];
-    [scrollView addSubview:vview];
-    // 添加固定数据按钮项
+    int index = 0, x = 0, y = 0, n = 1, j = 1;
+    // 数据视图集合
+    NSMutableArray<UIView *> *viewArray = [[NSMutableArray alloc]init];
+    // 生成页面视图
+    for (int i = 0; i < pageCount; i++) {
+        CGRect vviewRect = CGRectMake(0, 0, scrollViewRect.size.width, scrollViewRect.size.height);
+        UIView *view = [[UIView alloc]initWithFrame:vviewRect];
+        [viewArray addObject:view];
+        [scrollView addSubview:view];
+    }
+    // 添加固定数据项
     for (int i = 0; i < [fixedButtonTitleArray count]; i++) {
         if (i % 3 == 0 && i != 0) {
             if (x == 3) {
@@ -129,8 +136,51 @@
         [button setBackgroundImage:fixedImageArray[index] forState:UIControlStateNormal];
         [button setFont:[UIFont boldSystemFontOfSize:22]];
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [button setTag:(n + 1)];
-        [vview addSubview:button];
+        [button setTag:j+1];
+        [viewArray[0] addSubview:button];
+        x++;
+        index++;
+        n++;
+    }
+    // 添加用户数据项
+    for (int i = 0; i < [dataSource count]; i++) {
+        ///////////////////////////////
+        /// 排列上有问题
+        if (n % 9 == 0) {
+            
+        } else {
+            if (n % 9 == 0) {
+                x = 0;
+                y = 0;
+            }
+        }
+        ///////////////////////////////
+        if (n % 3 == 0 && n != 0) {
+            if (x == 3) {
+                y++;
+                x = 0;
+            }
+        }
+        if (index > [fixedImageArray count] - 1) {
+            index = 0;
+        }
+        CGRect buttonRect = CGRectMake(40 + x * 80 + x * 30, 30 + y * 80 + y * 30, 80, 80);
+        UIButton *button = [[UIButton alloc]initWithFrame:buttonRect];
+        [button setTitle:[NSString stringWithFormat:@"%@", dataSource[i]] forState:UIControlStateNormal];
+        [button setBackgroundImage:fixedImageArray[index] forState:UIControlStateNormal];
+        [button setFont:[UIFont boldSystemFontOfSize:22]];
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [button setTag:n+1];
+        if (n % 9 == 0) {
+            [viewArray[j] addSubview:button];
+            j++;
+        } else {
+            if (n % 9 == 0) {
+                x = 0;
+                y = 0;
+            }
+            [viewArray[j - 1] addSubview:button];
+        }
         x++;
         index++;
         n++;
@@ -168,6 +218,8 @@
         case 7:
             break;
         case 8:
+            break;
+        case 9:
             break;
         default:
             break;
